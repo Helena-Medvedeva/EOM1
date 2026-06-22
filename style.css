@@ -1,0 +1,488 @@
+
+/* CSS ЗМІННІ ТА ТЕМИ*/
+:root {
+    --bg: #0f0f0f;
+    --card: #1e1e1e;
+    --text: #ffffff;
+    --accent: #6aa9ff;
+}
+body.light-theme {
+    --bg: #f5f5f5;
+    --card: #ffffff;
+    --text: #111111;
+    --accent: #2b6cff;
+}
+
+
+/*БАЗОВІ СТИЛІ*/
+body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+h2{
+    color: var(--accent);
+}
+footer {
+    background: var(--bg);
+    color: var(--text);
+    text-align: center;
+    padding: 15px;
+}
+  
+  
+/*ОСНОВНІ КОНТЕЙНЕРИ*/
+.page-wrapper {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.section {
+    margin-bottom: 40px;
+}
+.section h2 {
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+}
+
+
+/*ШАПКА САЙТУ*/
+.page-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+body.light-theme .page-header {
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.nav-actions a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+
+/*ГОЛОВНА СТОРІНКА (HERO)*/
+.hero {
+    text-align: center;
+    padding: 120px 30px;
+    background-image: url("2.png");
+    background-size: cover;
+    background-position: center;
+}
+.search-box {
+    margin: 25px 0;
+}
+.search-box input {
+    width: 300px;
+    padding: 10px;
+}
+
+
+/* КАРТКИ НАВІГАЦІЇ */
+.nav-cards, .extra {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card {
+    background: var(--card);
+    color: var(--text);
+    padding: 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/*БІЧНЕ МЕНЮ*/
+.side-nav {
+    position: fixed;
+    left: 0;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+	padding: 10px;
+}
+
+
+/*КНОПКА ВГОРУ*/
+#toTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+
+/*ГАЛЕРЕЯ */
+.gallery {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 50px;
+    scroll-snap-type: x mandatory;
+}
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+/* Смуга прокручування */
+.gallery::-webkit-scrollbar {
+    height: 8px;
+}
+.gallery::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+
+/*СТОРІНКА ГЛОСАРІЯ*/
+
+/* Вступний текст */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+/* Поле пошуку */
+.search-box {
+    margin: 25px 0;
+}
+/* Алфавітний фільтр */
+.alphabet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.alphabet-nav a {
+    text-decoration: none;
+    background: var(--card);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+.alphabet-nav a:hover {
+    transform: translateY(-3px);
+}
+/* Заголовок літери */
+.letter-title {
+    margin: 30px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+}
+/* Сітка термінів */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+/* Картка терміна */
+.term-card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.term-card:hover {
+    transform: translateY(-5px);
+}
+/* Назва терміна */
+.term-card h2 {
+    margin-bottom: 15px;
+    color: var(--accent);
+    font-size: 22px;
+}
+/* Опис терміна */
+.term-card p {
+    line-height: 1.7;
+}
+
+
+/*КАРТКИ ВИНАХІДНИКІВ*/
+.inventors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+	padding: 50px;
+}
+.inventor-card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+}
+.inventor-card:hover {
+    transform: translateY(-5px);
+}
+.inventor-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.inventor-card h3 {
+    margin: 10px 0 5px;
+    color: var(--accent);
+}
+.inventor-card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/*ВІДЕО */
+.video {
+    margin: 50px 0;
+    text-align: center;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+}
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+
+/*СТОРІНКА ПРО ПРОЄКТ*/
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+	padding: 30px;
+}
+.about-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.about-card h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.about-card p {
+    line-height: 1.6;
+}
+
+/*БАНЕР*/
+.banner{
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(-45deg, #2b6cff, #6aa9ff, #1e1e1e, #2b6cff);
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+}
+.banner h1{
+  margin: 0;
+  font-size: 26px;
+}
+.banner p{
+  margin-top: 10px;
+  opacity: 0.9;
+}
+/* анімація руху градієнта */
+@keyframes gradientMove{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+/*ВИНАХІДНИКИ ЕПОХИ*/
+.inventor-row{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  background: var(--card);
+  padding: 15px;
+  border-radius: 12px;
+}
+.inventor-row img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.inventor-row b{
+  font-size: 18px;
+  color: var(--accent);
+}
+.inventor-row p{
+  margin: 5px 0 0;
+  line-height: 1.5;
+}
+
+
+/*КОЛІР ПОСИЛАНЬ*/
+a {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+
+
+/*АДАПТИВНІСТЬ*/
+
+@media (max-width: 768px) {
+
+  .page-header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .hero {
+    padding: 70px 15px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .gallery {
+    padding: 20px;
+  }
+
+  .gallery img {
+    width: 220px;
+    height: 150px;
+  }
+
+  .page-wrapper {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .side-nav {
+    display: none;
+  }
+}
+
+
+/* телефони */
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .gallery img {
+    width: 180px;
+    height: 130px;
+  }
+
+  .search-box input {
+    max-width: 100%;
+  }
+}
+
+
+/* винахідники */
+@media (max-width: 600px) {
+  .inventor-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inventor-row img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.text-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+}
