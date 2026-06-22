@@ -491,7 +491,8 @@ a:hover{
   border-radius: 12px;
 }
 .about-img {
-  width: 250px;
-  height: auto;
+    width: 150px;
+  display: block;
+  margin: 0 auto 15px;
   border-radius: 12px;
 }
