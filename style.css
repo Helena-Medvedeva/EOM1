@@ -490,12 +490,6 @@ a:hover{
   margin: 15px auto;
   border-radius: 12px;
 }
-
-.author-block{
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
 .about-img{
   width: 200px;
   border-radius: 12px;
