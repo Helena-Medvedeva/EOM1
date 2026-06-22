@@ -495,3 +495,23 @@ a:hover{
   border-radius: 12px;
   flex-shrink: 0;
 }
+
+
+/* Випадаюче меню */
+.dropdown{
+    position:relative;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background:var(--card);
+    min-width:180px;
+    border-radius:8px;
+}
+.dropdown-content a{
+    display:block;
+    padding:10px;
+}
+.dropdown:hover .dropdown-content{
+    display:block;
+}
