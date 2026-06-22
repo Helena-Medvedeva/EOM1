@@ -490,8 +490,14 @@ a:hover{
   margin: 15px auto;
   border-radius: 12px;
 }
-.about-img {
-  width: 210px;
+
+.author-block{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.about-img{
+  width: 200px;
   border-radius: 12px;
-  margin-bottom: 15px;
+  flex-shrink: 0;
 }
