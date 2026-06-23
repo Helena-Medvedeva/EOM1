@@ -172,3 +172,19 @@ if (gallery) {
 
 }
 });
+function encodeToBinary() {
+  let text = document.getElementById("nameInput").value;
+  let result = "";
+
+  if (text.trim() === "") {
+    document.getElementById("binaryOutput").innerText =
+      "Введи ім’я, інакше система сумує в нулях.";
+    return;
+  }
+
+  for (let i = 0; i < text.length; i++) {
+    result += text[i].charCodeAt(0).toString(2) + " ";
+  }
+
+  document.getElementById("binaryOutput").innerText = result;
+}
