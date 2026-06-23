@@ -134,5 +134,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+// Автоматична галерея
+//=====================================
 
+const gallery = document.querySelector(".gallery");
+
+if (gallery) {
+
+    let speed = 2;      // швидкість 
+    let animationId;
+    let paused = false;
+
+    function animate() {
+
+        if (!paused) {
+
+            gallery.scrollLeft += speed;
+
+            if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth) {
+                gallery.scrollLeft = 0;
+            }
+
+        }
+
+        animationId = requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    gallery.addEventListener("mouseenter", () => {
+        paused = true;
+    });
+
+    gallery.addEventListener("mouseleave", () => {
+        paused = false;
+    });
+
+}
 });
