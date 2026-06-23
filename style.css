@@ -104,6 +104,7 @@ body.light-theme .page-header {
     background-image: url("2.png");
     background-size: cover;
     background-position: center;
+	color: #fff;
 }
 .search-box {
     margin: 25px 0;
