@@ -516,3 +516,46 @@ a:hover{
 .dropdown:hover .dropdown-content{
     display:block;
 }
+
+
+
+.decoder-section {
+  margin: 50px auto;
+  padding: 20px;
+}
+.decoder-box {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #2c3e50;
+  border-radius: 12px;
+  background: #f4f6f8;
+  text-align: center;
+  color: black
+}
+.decoder-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+.decoder-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #3b2f26;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.output {
+  margin-top: 15px;
+  font-family: monospace;
+  word-break: break-word;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px dashed #aaa;
+  color: black
+}
